@@ -28,9 +28,9 @@ kotlin {
 }
 
 dependencies {
-    compileOnly("net.mamoe:mirai-core-qqandroid:${Versions.Mirai.core}")
-    api(project(":mirai-console"))
-    api(group = "com.googlecode.lanterna", name = "lanterna", version = "3.0.2")
+    implementation("net.mamoe:mirai-core-qqandroid:${Versions.Mirai.core}")
+    implementation(project(":mirai-console"))
+    implementation(group = "com.googlecode.lanterna", name = "lanterna", version = "3.0.2")
 }
 val compileKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
 compileKotlin.kotlinOptions {

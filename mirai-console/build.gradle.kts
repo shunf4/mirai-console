@@ -29,14 +29,14 @@ kotlin {
 }
 dependencies {
     compileOnly("net.mamoe:mirai-core:${Versions.Mirai.core}")
-    compileOnly(kotlin("stdlib")) // embedded by core
+    implementation(kotlin("stdlib")) // embedded by core
 
-    api("com.google.code.gson:gson:2.8.6")
-    api(group = "org.yaml", name = "snakeyaml", version = "1.25")
-    api(group = "com.moandjiezana.toml", name = "toml4j", version = "0.7.2")
-    api("org.jsoup:jsoup:1.12.1")
+    implementation("com.google.code.gson:gson:2.8.6")
+    implementation(group = "org.yaml", name = "snakeyaml", version = "1.25")
+    implementation(group = "com.moandjiezana.toml", name = "toml4j", version = "0.7.2")
+    implementation("org.jsoup:jsoup:1.12.1")
 
-    api("org.jetbrains:annotations:19.0.0")
+    implementation("org.jetbrains:annotations:19.0.0")
 
     testApi("net.mamoe:mirai-core-qqandroid:${Versions.Mirai.core}")
     testApi(kotlin("stdlib"))

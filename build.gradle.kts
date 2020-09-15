@@ -40,7 +40,7 @@ subprojects {
             (this as ExtensionAware).extensions.getByName("kotlin") as? org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
                 ?: return@afterEvaluate
 
-        tasks.getByName("shadowJar") {
+        /* tasks.getByName("shadowJar") {
             doLast {
                 this.outputs.files.forEach {
                     if (it.nameWithoutExtension.endsWith("-all")) {
@@ -59,7 +59,7 @@ subprojects {
                     }
                 }
             }
-        }
+        } */
 
         val githubUpload by tasks.creating {
             group = "mirai"
